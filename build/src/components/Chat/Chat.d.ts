@@ -1,4 +1,5 @@
 import React, { SetStateAction } from 'react';
+import 'react-autocomplete-input/dist/bundle.css';
 import './Chat.css';
 import { ICustomComponents, ICustomMessage, ICustomStyles } from '../../interfaces/IConfig';
 import { IMessage } from '../../interfaces/IMessages';
