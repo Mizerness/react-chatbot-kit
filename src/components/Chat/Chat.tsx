@@ -4,7 +4,7 @@ import ConditionallyRender from 'react-conditionally-render';
 import UserChatMessage from '../UserChatMessage/UserChatMessage';
 import ChatbotMessage from '../ChatbotMessage/ChatbotMessage';
 
-import TextField from 'react-autocomplete-input';
+import TextInput from 'react-autocomplete-input';
 import 'react-autocomplete-input/dist/bundle.css';
 
 import {
@@ -311,7 +311,7 @@ const Chat = ({
             className="react-chatbot-kit-chat-input-form"
             onSubmit={handleSubmit}
           >
-            <TextField
+            <TextInput
               className="react-chatbot-kit-chat-input"
               placeholder={placeholder}
               value={input}
