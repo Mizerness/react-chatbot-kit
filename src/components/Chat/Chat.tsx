@@ -315,7 +315,7 @@ const Chat = ({
               className="react-chatbot-kit-chat-input"
               placeholder={placeholder}
               value={input}
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e: any) => setInputValue(e.target.value)}
               trigger={['/']}
               options={{ '/': ['aa', 'ab', 'abc', 'abcd'] }}
             />
