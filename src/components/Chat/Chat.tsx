@@ -4,6 +4,9 @@ import ConditionallyRender from 'react-conditionally-render';
 import UserChatMessage from '../UserChatMessage/UserChatMessage';
 import ChatbotMessage from '../ChatbotMessage/ChatbotMessage';
 
+import TextField from 'react-autocomplete-input';
+import 'react-autocomplete-input/dist/bundle.css';
+
 import {
   botMessage,
   userMessage,
@@ -266,7 +269,7 @@ const Chat = ({
     header = headerText;
   }
 
-  let placeholder = 'Write your message !!';
+  let placeholder = 'Write your message here';
   if (placeholderText) {
     placeholder = placeholderText;
   }
@@ -308,12 +311,15 @@ const Chat = ({
             className="react-chatbot-kit-chat-input-form"
             onSubmit={handleSubmit}
           >
-            <input
+            <TextField
               className="react-chatbot-kit-chat-input"
               placeholder={placeholder}
               value={input}
               onChange={(e) => setInputValue(e.target.value)}
+              trigger={['/']}
+              options={{ '/': ['aa', 'ab', 'abc', 'abcd'] }}
             />
+
             <button
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
